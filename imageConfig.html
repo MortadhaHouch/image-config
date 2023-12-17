@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="./imageConfig.css">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+            <section>
+                <div class="inputs">
+                    <div>
+                        <input type='url' id="inputURL">
+                        <label for="inputText">inset here a URL</label>
+                    </div>
+                    <p>OR</p>
+                    <div title="input a file" class="fileChoice">
+                        <label for="inputFile"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-cloud-arrow-down-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M8 2a5.53 5.53 0 0 0-3.594 1.342c-.766.66-1.321 1.52-1.464 2.383C1.266 6.095 0 7.555 0 9.318 0 11.366 1.708 13 3.781 13h8.906C14.502 13 16 11.57 16 9.773c0-1.636-1.242-2.969-2.834-3.194C12.923 3.999 10.69 2 8 2zm2.354 6.854-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 1 1 .708-.708L7.5 9.293V5.5a.5.5 0 0 1 1 0v3.793l1.146-1.147a.5.5 0 0 1 .708.708z" />
+                            </svg></label>
+                        <input type="file" id="inputFile">
+                    </div>
+                        <div id="div">
+                            <button class="download">download</button>
+                            <select name="" id="select">
+                                <option value="png">png</option>
+                                <option value="jpg">jpg</option>
+                                <option value="jpeg">jpeg</option>
+                                <option value="webp">webp</option>
+                            </select>
+                                <button class="resetInputs">reset all inputs</button>
+                        </div>
+                </div>
+                <div id="filtersContainer">
+                    <div id="presets">
+                        <div>
+                            <i class="fa-brands fa-facebook"></i>
+                            <select name="" id="" class="sizes">
+                                <option value="851px*315px">cover photo</option>
+                                <option value="180px*180px">profile photo</option>
+                                <option value="700px*700px">image post</option>
+                                <option value="1200px*627px">ad</option>
+                            </select>
+                        </div>
+                        <div>
+                            <i class="fa-brands fa-instagram"></i>
+                            <select name="" id="" class="sizes">
+                                <option value="110px*110px">profile photo</option>
+                                <option value="1080px*1080px">post/ad</option>
+                            </select>
+                        </div>
+                        <div>
+                            <i class="fa-brands fa-twitter"></i>
+                            <select name="" id="" class="sizes">
+                                <option value="1500px*500px">header</option>
+                                <option value="400px*400px">profile photo</option>
+                                <option value="800px*320px">twitter card</option>
+                            </select>
+                        </div>
+                        <div>
+                            <i class="fa-brands fa-youtube"></i>
+                            <select name="" id="" class="sizes">
+                                <option value="2560px*1440px">cover photo</option>
+                                <option value="800px*800px">profile photo</option>
+                                <option value="1280px*720px">video upload</option>
+                            </select>
+                        </div>
+                        <div>
+                            <i class="fa-brands fa-linkedin"></i>
+                            <select name="" id="" class="sizes">
+                                <option value="646px*220px">cover photo</option>
+                                <option value="400px*400px">profile photo</option>
+                                <option value="100px*60px">brand logo</option>
+                                <option value="800px*800px">posted photo</option>
+                            </select>
+                        </div>
+                        <div>
+                            <i class="fa-brands fa-google-plus-g"></i>
+                            <select name="" id="" class="sizes">
+                                <option value="250px*250px">profile photo</option>
+                                <option value="1080px*608px">cover photo</option>
+                                <option value="497px*373px">shared photo</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div>
+                        <input type="number" name="" id="width">
+                        <label for="width" title="width"><span class="material-symbols-outlined">width</span></label>
+                    </div>
+                    <div>
+                        <input type="number" name="" id="height">
+                        <label for="height" title="height"><span class="material-symbols-outlined">height</span></label>
+                    </div>
+                    <div>
+                        <input type="number" name="" id="blur">
+                        <label for="blur" title="blur"><span class="material-symbols-outlined">blur_on</span></label>
+                    </div>
+                    <div>
+                        <input type="number" name="" id="contrast">
+                        <label for="contrast" title="contrast"><span class="material-symbols-outlined">contrast</span></label>
+                    </div>
+                    <div>
+                        <input type="number" name="" id="borderRadiusTop">
+                        <label for="borderRadiusTop" title="top left border radius"><span class="material-symbols-outlined">rounded_corner</span></label>
+                    </div>
+                    <div>
+                        <input type="number" name="" id="borderRadiusLeft">
+                        <label for="borderRadiusLeft" title="top right border radius"><span class="material-symbols-outlined">rounded_corner</span></label>
+                    </div>
+                    <div>
+                        <input type="number" name="" id="borderRadiusBottom">
+                        <label for="borderRadiusBottom" title="bottom right border radius"><span class="material-symbols-outlined">rounded_corner</span></label>
+                    </div>
+                    <div>
+                        <input type="number" name="" id="borderRadiusRight">
+                        <label for="borderRadiusRight" title="bottom left border radius"><span class="material-symbols-outlined">rounded_corner</span></label>
+                    </div>
+                    <div>
+                        <input type="number" name="" id="invert">
+                        <label for="invert" title="invert"><span class="material-symbols-outlined">invert_colors</span></label>
+                    </div>
+                    <div>
+                        <input type="number" name="" id="brightness">
+                        <label for="brightness" title="brightness"><span class="material-symbols-outlined">settings_brightness</span></label>
+                    </div>
+                    <div>
+                        <input type="number" name="" id="hue-rotate">
+                        <label for="hue-rotate">hue rotate</label>
+                    </div>
+                    <div>
+                        <input type="number" name="" id="grayscale">
+                        <label for="grayscale">grayscale</label>
+                    </div>
+                    <div>
+                        <input type="number" name="" id="sepia">
+                        <label for="sepia">sepia</label>
+                    </div>
+                    </div>
+                </div>
+            </section>
+    </section>
+    <main class="hidden">
+        <div>
+            <h1>image preview</h1>
+            <img src="" alt="here is the image placeholder">
+        </div>
+        <div style="display: none;">
+            <h1>image to be downloaded</h1>
+            <canvas></canvas>
+        </div>
+    </main>
+    <section class="loading">
+        <div>
+            <span style="--i:0;"></span>
+            <span style="--i:1;"></span>
+            <span style="--i:2;"></span>
+            <span style="--i:3;"></span>
+            <span style="--i:4;"></span>
+            <span style="--i:5;"></span>
+            <span style="--i:6;"></span>
+            <span style="--i:7;"></span>
+            <span style="--i:8;"></span>
+            <span style="--i:9;"></span>
+        </div>
+    </section>
+</body>
+<script src="imageConfig.js" defer></script>
+</html>

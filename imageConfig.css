@@ -1,0 +1,348 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    transition: 0.25s;
+    transform-origin: center;
+}
+body{
+    min-width: 100vw;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    max-width: fit-content;
+    max-height: fit-content;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+    background-color: #776B5D ;
+}
+body > section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    min-height: 95%;
+    background:linear-gradient(45deg,transparent,rgba(255,255,255,0.25));
+    border-right: 3px solid rgba(255, 255, 255, 0.25);
+    border-top: 3px solid rgba(255, 255, 255, 0.25);
+    padding: 20px;
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+}
+body > section > section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+body > section > section > div.inputs{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 80%;
+    height: 100%;
+    gap: 20px;
+}
+body > section > section > div.inputs > div{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    width: 80%;
+    height: fit-content;
+}
+body > section > section > div.inputs > div:first-child{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    width: 100%;
+    height: fit-content;
+}
+body > section > section > div.inputs > div:first-child > input#inputURL{
+    font-size: 15px;
+    padding: 5px 10px;
+    border-radius: 15px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.15);
+    border: 2px solid rgba(255, 255, 255, 0.75);
+}
+body > section > section > div.inputs > div:first-child > label{
+    position: absolute;
+    inset: 0 auto auto auto;
+    pointer-events: none;
+    font-size: 15px;
+    width: fit-content;
+    text-align: center;
+    padding: 5px 20px;
+}
+body > section > section > div.inputs > div:first-child > input#inputURL:focus{
+    border: 2px solid rgb(255, 255, 255);
+    background-color:rgb(255, 255,255,.9);
+    transition: 0.25s;
+}
+body > section > section > div.inputs > div:first-child > input#inputURL:focus ~ label{
+    transform: scale(0.7) translateY(-25px);
+    transition: 0.25s;
+    border-radius: 20px;
+    background-color: white;
+}
+body > section > section > div.inputs > div:first-child > input#inputURL:not(:focus) ~ label{
+    transform: scale(1) translateY(0);
+    transition: 0.25s;
+    border-radius: 0px;
+}
+body > section > section > div:nth-child(2),div#div{
+    display: none;
+}
+body > section > section > div.inputs > div.fileChoice{
+    width: 250px;
+    height: 250px;
+    border-radius: 25px;
+    border:2px solid rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.25);
+    position: relative;
+}
+body > section > section > div.inputs > div.fileChoice > input[type="file"]{
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
+    opacity: 0;
+}
+body > section > section > div.inputs > div.fileChoice > label{
+    position: fixed;
+    inset: auto;
+}
+svg{
+    cursor: pointer;
+    width: 100px;
+    height: 100px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+body > section > section > div.filters {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 50%;
+    height: 100%;
+    padding: 10px 30px;
+    gap: 10px;
+}
+body > section > section > div.filters > div{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+body > section > section > div.filters > div:last-child{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 100%;
+}
+body > section > section > div.filters > div:last-child > h1{
+    text-align: center;
+    width: 100%;
+    margin: auto;
+}
+body > section > section > div.filters > div:last-child > div{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: fit-content;
+    gap: 5px;
+}
+body > section > section > div.filters > div:last-child > div > input{
+    font-size: 15px;
+    padding: 5px 10px;
+    padding-left: 25px;
+    border: 1px solid black;
+    width:100px;
+}
+body > section > section > div.filters > div > input{
+    border: 1px solid rgba(255, 255, 255, 0.75);
+    padding: 5px 10px;
+    padding-left: 25px;
+    font-size: 15px;
+    width:100px;
+    background-color:rgba(255, 255, 255, .25) ;
+}
+body > section > section > div.filters > div > input:focus{
+    border: 1px solid rgb(255, 255, 255);
+    background-color:rgba(255, 255, 255, .25) ;
+}
+a{
+    text-decoration: none;
+}
+button{
+    font-size: 25px;
+    color: white;
+    background-color: #004d7a;
+    padding: 5px 10px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+select{
+    color: black;
+    background-color: transparent;
+    padding: 5px;
+}
+select:hover{
+    background-color: #004d7a;
+    color: white;
+    transition: 0.25s;
+}
+select#select{
+    font-size: 20px;
+}
+div#presets{
+    width: 100%;
+    gap: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+div#presets > div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    height: fit-content;
+    gap: 10px;
+}
+div#presets > div >i{
+    font-size: 25px;
+}
+div#presets > div >i.fa-brands.fa-facebook{
+    color: rgba(59, 89, 152);
+}
+div#presets > div >i.fa-brands.fa-instagram{
+    color: rgba(233, 89, 80);
+}
+div#presets > div >i.fa-brands.fa-twitter{
+    color: rgba(85, 172, 238);
+}
+div#presets > div >i.fa-brands.fa-youtube{
+    color: rgba(255, 0, 0);
+}
+div#presets > div >i.fa-brands.fa-linkedin{
+    color: rgb(10, 102, 194);
+}
+div#presets > div >i.fa-brands.fa-google-plus-g{
+    color: rgb(255,0,0);
+}
+main.hidden{
+    display: none;
+}
+main{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap:20px;
+}
+main > div{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap:20px;
+}
+main > div > h1{
+    color: white;
+}
+img,canvas{
+    border: 2px solid black;
+    aspect-ratio:unset;
+}
+div:has(span.material-symbols-outlined){
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+div:has(span.material-symbols-outlined) > label{
+    font-size: 20px;
+    position: absolute;
+}
+div:has(span.material-symbols-outlined)> label[title="top left border radius"] > span{
+    transform:rotateY(180deg);
+}
+div:has(span.material-symbols-outlined)> label[title="bottom right border radius"] > span{
+    transform:rotateX(-180deg);
+}
+div:has(span.material-symbols-outlined)> label[title="bottom left border radius"] > span{
+    transform:rotateX(-180deg) rotateY(-180deg);
+}
+button.operationButton{
+    background-color: #051937;
+    font-size: 15px;
+    color: white;
+}
+fieldset{
+    border: 2px solid black;
+    padding: 5px 10px;
+}
+body section.loading{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    inset: 0;
+    opacity: 1;
+    transform: scale(1);
+    border-radius: 0px;
+}
+body section.loading:not(.showing){
+    opacity: 0;
+    transform: scale(0);
+}
+body section.loading div{
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation-name: loading;
+    animation-duration:2.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+body section.loading div span{
+    width: 15px;
+    height: 15px;
+    background-color: aliceblue;
+    box-shadow: 0px 0px 3px 3px rgba(240, 248, 255, 0.4);
+    position: absolute;
+    inset: auto;
+    transform: rotateZ(calc(36deg * var(--i))) translateX(75px);
+    border-radius: 50%;
+}
+@keyframes loading {
+    0%{
+        transform: rotateZ(0deg);
+    }
+    100%{
+        transform: rotateZ(360deg);
+    }
+}
